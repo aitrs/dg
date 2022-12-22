@@ -13,11 +13,11 @@
 <h1>Presentation</h1>
 </a>
 
-Datagen aims to create big payload documents with the same randomized data applied to one or many 
+Dg aims to create big payload documents with the same randomized data applied to one or many 
 <a href="https://handlebarsjs.com/">handlebars</a> templates. 
 This project is rooted in the need to fastly and easily generate mock data in the context of a CI/CD 
 environment.
-Datagen uses a list of items which are randomly generated to be used in a handlebars template.
+Dg uses a list of items which are randomly generated to be used in a handlebars template.
 These items come with a small list of primitives that render data directly, and can be completed
 with custom data definitions (either as stacked options or in a file).
 
@@ -26,7 +26,7 @@ with custom data definitions (either as stacked options or in a file).
 </a>
 
 ### Arguments
-Datagen uses a list of templates as input arguments. 
+Dg uses a list of templates as input arguments. 
 Without specifying output files, all the templates are rendered sequentially
 on the standard output.
 
