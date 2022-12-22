@@ -1,0 +1,2 @@
+custom = incr() % (3 + 2)
+small = random(2:4)

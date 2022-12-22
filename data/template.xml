@@ -1,0 +1,13 @@
+<body>
+    <some>value</some>
+    {{#each item}}
+    <foo>
+        <random>{{this.random}}</random>
+        <randomstring>{{this.randstr}}</randomstring>
+        <increment>{{this.increment}}</increment>
+        <custom>{{this.custom}}</custom>
+        <small>{{this.small}}</small>
+        <person>{{this.firstname}} {{this.lastname}}</person>
+    </foo>
+    {{/each}}
+</body>

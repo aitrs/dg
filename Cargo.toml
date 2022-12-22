@@ -1,0 +1,11 @@
+[package]
+name = "datagen"
+version = "0.1.2"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0.30", features = ["derive"] }
+handlebars = "4.3.6"
+peg = "0.8.1"
+rand = "0.8.5"
+serde = { version = "1.0.151", features = ["derive"] }

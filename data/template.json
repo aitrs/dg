@@ -1,0 +1,18 @@
+{
+  "some": "value",
+  "items": [
+  {{#each item}}
+    {
+      "random": {{this.random}},
+      "randomstring": "{{this.randstr}}",
+      "increment": {{this.increment}},
+      "custom": "{{this.custom}}",
+      "small": {{this.small}},
+      "person": {
+        "fistname": "{{this.firstname}}",
+        "lastname": "{{this.lastname}}"
+      }
+    },
+  {{/each}}
+  ]
+}
