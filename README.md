@@ -1,10 +1,10 @@
-# datagen
+# dg
 
 **README Sections:** [Presentation](#presentation) - [Usage](#usage) - [Data Definitions](#data) - [Installation](#installation) - [Contributing](#contributing)
 
 ---
 
-**datagen** is a general purpose lightweight mock document generator 
+**dg** (for data generator) is a general purpose lightweight mock document generator 
 (useful for generating big payloads for software test suites) that aims to be very simple (yet flexible).
 
 ---
@@ -44,9 +44,9 @@ This option is here to setup the length of it (defaults to 10 characters).
 - **-V**, **--version**: Print the version
 
 ### Examples
-- `datagen -c 1000 --definitions-file ./definitions_1 -o ./1000-units.xml ./units.template.xml`: Will use the template `units.template.xml` to generate the file `1000-units.xml` with extra data definitions from `definitions_1` and containing a rendered 1000 items.
-- `datagen -o ./10-units.xml ./units.template.xml ./units.template.json`: Will render 10 elements in `10-units.xml` from template `units.template.xml` and then render 10 elements from `units.template.json` on stdout
-- `datagen -o ./10-units.xml -o ./10-units.json ./units.template.xml ./units.template.json` is similar to the line above except that the json template is rendered in `10-units.json`
+- `dg -c 1000 --definitions-file ./definitions_1 -o ./1000-units.xml ./units.template.xml`: Will use the template `units.template.xml` to generate the file `1000-units.xml` with extra data definitions from `definitions_1` and containing a rendered 1000 items.
+- `dg -o ./10-units.xml ./units.template.xml ./units.template.json`: Will render 10 elements in `10-units.xml` from template `units.template.xml` and then render 10 elements from `units.template.json` on stdout
+- `dg -o ./10-units.xml -o ./10-units.json ./units.template.xml ./units.template.json` is similar to the line above except that the json template is rendered in `10-units.json`
 
 ### Template Example
 
@@ -76,7 +76,7 @@ The others are custom data defintions. We will cover that below.
 
 ### Primitives
 
-Datagen yields some primitives in each item it generates: 
+Dg yields some primitives in each item it generates: 
 - **random**: is a signed random integer
 - **randstr**: a fixed-length random string
 - **increment**: the index of the item
@@ -113,7 +113,7 @@ With the template
 {{/each}}
 ```
 
-And with the command `datagen -c 5 -d "custom = incr() % 3" ./template.xml`,
+And with the command `dg -c 5 -d "custom = incr() % 3" ./template.xml`,
 We will generate the following
 
 ```xml
@@ -144,8 +144,8 @@ NB : Be careful of dividing by zero !
 For now, it is only possible to install it via the <a href="https://rustup.rs/">rust</a> toolchain
 (follow the link to install it :)).
 When you're done installing rust:
-- `git clone`
-- `cd datagen`
+- `git clone https://github.com/aitrs/dg `
+- `cd dg`
 - `cargo install --path .`
 
 And then you will have it in your path.
