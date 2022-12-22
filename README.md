@@ -91,9 +91,9 @@ The **-d** and **--definitions-file** options work in a very similar ways. The m
 inlines one or several custom data definitions while the other sets a file path holding definitions to be fully parsed.
 In the file or inlined, the definitions come in the form: `key = expression`.
 The following arithmetic operations/rules are supported :
-- +
-- -
-- *
+- \+
+- \-
+- \*
 - /
 - %
 - parentheses and precedence
